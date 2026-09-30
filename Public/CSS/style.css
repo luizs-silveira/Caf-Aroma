@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --of-white: #f8f5f2;
+    --cinza-escuro: #333333;
+    --fundo-header: #5c3d2e;
+    --branco: #ffffff;
+    --bege-quente: #ffd669;
+    --bege-claro: #f0e6dd;
+    --marrom-medio: #8b5e3c;
+    --cinza-claro: #e6e6e6;
+    --preto-suave: #1a1a1a;
+    --sombra: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--of-white);
+    color: var(--cinza-escuro);
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fundo-header);
+    height: 70px;
+    color: var(--branco);
+    padding: 0 40px;
+}
+
+#logo {
+    display: flex;   
+    align-items: center;
+    gap: 15px;
+}
+
+#logocafe {
+    width: 45px;
+    height: auto;
+    animation: bounceAnimation 2.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.4s infinite normal both;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--of-white);
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: var(--bege-quente);
+    transform: scale(1.1);
+}
+
+/* --- BANNER --- */
+#banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+    background: linear-gradient(790deg, #b38b6d, var(--marrom-medio), #7b5541);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s linear infinite;
+}
+
+#texto-banner {
+    width: 45%;
+    animation: slideLeftAnimation 2.1s ease-in-out 0.4s 1 normal both;
+}
+
+#texto-banner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#texto-banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+
+#banner img {
+    width: 35%;
+    border-radius: 15px;
+    animation: slideRightAnimation 2.1s ease-in-out 0.5s 1 normal both;
+}
+
+/* --- SEÇÃO DE CARDS (CARDÁPIO) --- */
+.titulo {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 34px;
+    animation: bounceAnimation 3.0s 0.4s infinite normal both;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+/* Card Individual */
+.card {
+    width: 280px;
+    background-color: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 12px var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem dentro do Card */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 15px 10px 10px;
+    padding-bottom: 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    line-height: 1.4;
+}
+
+
+
+/* Botões */
+button, .card button {
+    background-color: var(--fundo-header);
+    color: var(--branco);
+    border: none;
+    height: 40px;
+    width: 80%;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .card button:hover {
+    background-color: #5c3d2e;
+    transform: scale(1.03);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--marrom-medio);
+    text-align: center;
+    color: var(--branco);
+    padding: 20px 0;
+}
+
+footer h3 {
+    font-weight: bold;
+}
+
+.textofooter {
+    padding: 10px 0;
+    color: var(--branco);
+}
